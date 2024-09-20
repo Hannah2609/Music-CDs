@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Music CDs</title>
+</head>
+<body>
+    <header>
+        <h1>Music CDs</h1>
+    </header>
+
+    <main>
+        <form id="cd-form">
+                <label for="author" grid-area="label"> Author </label>
+                <input id="author" type="text" required grid-area="textbox">
+
+                <label for="title" grid-area="label"> Title </label>
+                <input id="title" type="text" required grid-area="textbox">
+
+                <label for="year" grid-area="label"> Year </label>
+                <input id="year" type="number" maxlength="4" pattern="^\d{4}$" required grid-area="textbox">
+            <button type="submit" id="SubmitBtn">Add</button>
+        </form>
+
+        <table id="cd-table">
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th class="delete"></th>
+                </tr>
+            </thead>
+            <tbody id="cd-table-body">
+            </tbody>
+        </table>
+
+        <template id="cd-row-template">
+            <tr>
+                <td class="cd-title"></td>
+                <td class="cd-artist"></td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+        </template>
+
+    </main>
+    <footer>&copy; Hannah Isabel Grenade</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
